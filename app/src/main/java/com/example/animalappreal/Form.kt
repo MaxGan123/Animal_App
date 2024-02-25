@@ -34,7 +34,9 @@ class Form : AppCompatActivity() {
         nameInput = findViewById(R.id.name)
         bioInput = findViewById(R.id.bio)
         chooseButton = findViewById(R.id.chooseButton)
-        submitButton = findViewById(R.id.submitButton)
+        nameInput.text = "shelter name"
+        bioInput.text = "information"
+        chooseButton.text = "Website"
         submitButton.setOnClickListener {
             val user = hashMapOf(
                 "bio" to bioInput.text,
