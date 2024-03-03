@@ -19,11 +19,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         website = findViewById(R.id.website)
-        website.setOnClickListener {
-            val url = Intent(Intent.ACTION_VIEW)
-            url.data = Uri.parse("http://hola9.org")
-            startActivity(url)
-        }
+//        website.setOnClickListener {
+//            val url = Intent(Intent.ACTION_VIEW)
+//            url.data = Uri.parse("http://hola9.org")
+//            startActivity(url)
+//        }
         button2 = findViewById(R.id.button2)
         button2.text = "Form"
         button3 = findViewById(R.id.button3)
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 //        button3.setOnClickListener{
 //
 //        }
-        button2.setOnClickListener {
+        website.setOnClickListener {
             var form = Intent(this, Form::class.java)
             startActivity(form)
         }
