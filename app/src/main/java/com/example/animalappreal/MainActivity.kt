@@ -25,16 +25,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(url)
         }
         button2 = findViewById(R.id.button2)
-        button2.text = "Adopt"
+        button2.text = "Form"
         button3 = findViewById(R.id.button3)
         button3.text = "firebase_Add"
-        button3.setOnClickListener{
+//        button3.setOnClickListener{
+//
+//        }
+        button2.setOnClickListener {
             var form = Intent(this, Form::class.java)
             startActivity(form)
-        }
-        button2.setOnClickListener {
-            var adopt = Intent(this, Adopt::class.java)
-            startActivity(adopt)
         }
 //        fun firebase_Add() {
 //            val db = Firebase.firestore

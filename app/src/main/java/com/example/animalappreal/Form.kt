@@ -21,7 +21,7 @@ class Form : AppCompatActivity() {
     // <!--    need variable that represents firebase storage-->
     //need variable of URI, variable of firebase storage, variable to represent storage reference(location)
     lateinit var filePath: Uri
-    lateinit var storage: FirebaseStorage
+//    lateinit var storage: FirebaseStorage
     lateinit var nameInput: EditText
     lateinit var bioInput: EditText
     lateinit var submitButton: Button
@@ -34,8 +34,8 @@ class Form : AppCompatActivity() {
         nameInput = findViewById(R.id.name)
         bioInput = findViewById(R.id.bio)
         chooseButton = findViewById(R.id.chooseButton)
-        nameInput.text = "shelter name"
-        bioInput.text = "information"
+        nameInput.text.append("shelter name")
+        bioInput.text.append("information")
         chooseButton.text = "Website"
         submitButton.setOnClickListener {
             val user = hashMapOf(
