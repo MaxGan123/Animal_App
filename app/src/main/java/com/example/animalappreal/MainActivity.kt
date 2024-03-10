@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 //        button3.setOnClickListener{
 //
 //        }
-        website.setOnClickListener {
+        button2.setOnClickListener {
             var form = Intent(this, Form::class.java)
             startActivity(form)
         }

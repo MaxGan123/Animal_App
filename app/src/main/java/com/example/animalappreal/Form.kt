@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
+import android.content.Intent
+
 
 class Form : AppCompatActivity() {
 //need local file path of the image, will not be uploading to firebase, store into storage instance
@@ -24,7 +26,7 @@ class Form : AppCompatActivity() {
 //    lateinit var storage: FirebaseStorage
     lateinit var nameInput: EditText
     lateinit var bioInput: EditText
-    lateinit var submitButton: Button
+//    lateinit var submitButton: Button
     lateinit var chooseButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,23 +36,25 @@ class Form : AppCompatActivity() {
         nameInput = findViewById(R.id.name)
         bioInput = findViewById(R.id.bio)
         chooseButton = findViewById(R.id.chooseButton)
+//        submitButton = findViewById(R.id.submitButton);
+
         nameInput.text.append("shelter name")
         bioInput.text.append("information")
         chooseButton.text = "Website"
-        submitButton.setOnClickListener {
-            val user = hashMapOf(
-                "bio" to bioInput.text,
-                "name" to nameInput.text
-            )
-            db.collection("user")
-                .add(user)
-                .addOnSuccessListener { documentReference ->
-                    Log.d(
-                        "Firestore",
-                        "Document with document id: ${documentReference.id} added successfully"
-                    )
-                }
-                .addOnFailureListener { e -> Log.w("Firestore", "Error adding doc: ${e}") }
-        }
+//        submitButton.setOnClickListener {
+//            val user = hashMapOf(
+//                "bio" to bioInput.text,
+//                "name" to nameInput.text
+//            )
+//            db.collection("user")
+//                .add(user)
+//                .addOnSuccessListener { documentReference ->
+//                    Log.d(
+//                        "Firestore",
+//                        "Document with document id: ${documentReference.id} added successfully"
+//                    )
+//                }
+//                .addOnFailureListener { e -> Log.w("Firestore", "Error adding doc: ${e}") }
+//        }
     }
 }
